@@ -1,17 +1,15 @@
 #!/usr/bin/python
+# -*- coding: utf-8 -*-
 
 # This code can be reused in any project and in any way you want. 
 # It would be nice if you let me know or you cite this project.
 # 
-# Fernando Tricas Garcia
+# Fernando Tricas García
 # https://github.com/fernand0/lola
 #
 # This code can be used to test individual movements. It is useful when you
 # need to test some configuration, positions of the legs and so on.
 
-
-
-#from RPIO import PWM
 from serial import Serial
 import time
 import sys

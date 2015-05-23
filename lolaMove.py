@@ -1,9 +1,10 @@
 #!/usr/bin/python
+# -*- coding: utf-8 -*-
 
 # This code can be reused in any project and in any way you want. 
 # It would be nice if you let me know or you cite this project.
 # 
-# Fernando Tricas Garcia
+# Fernando Tricas García
 # https://github.com/fernand0/lola
 
 from serial import Serial
