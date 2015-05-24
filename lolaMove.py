@@ -66,6 +66,7 @@ srvINC=[[-1,-1,+1],
 
 SPEED=100
 WAIT=0.1
+debug=0
 
 
 def angleMap(angle):
@@ -86,8 +87,12 @@ def legPOS(i,serv, inc):
         srvINC[srvPOS[i][serv][0]][srvPOS[i][serv][1]]*inc)
 
 while True:
+    # This is a simple sequence of steps Three legs are up and moving forward,
+    # the other three are down and moving backward
+
     WAIT=0.2
-    print srvPOS
+    if (debug !=0):
+        print srvPOS
 
     mov1=""
 
@@ -100,7 +105,9 @@ while True:
         mov1=mov1+"#%d P%s "%(legS,pos)
 
     mov1=mov1+ "T%d\r"%(SPEED)
-    print "Bajar lado 2", mov1
+    print "Bajar lado 2"
+    if (debug > 1):
+        print mov1
     ser.write(mov1)
     time.sleep(WAIT)
 
@@ -114,7 +121,9 @@ while True:
         pos=angleMap(legPOS(i,2,65))
         mov1=mov1+"#%d P%s "%(legS,pos)
     mov1=mov1+ "T%d\r"%(SPEED)
-    print "Levantar lado 1", mov1
+    print "Levantar lado 1"
+    if (debug > 1):
+        print mov1
     ser.write(mov1)
     time.sleep(WAIT)
 
@@ -150,7 +159,9 @@ while True:
 
     mov1=mov1+ "T%d\r"%(SPEED)
 
-    print "2", mov1
+    print "Avance lado 2"
+    if (debug > 1):
+        print mov1
     ser.write(mov1)
     time.sleep(WAIT)
 
@@ -166,7 +177,9 @@ while True:
         mov1=mov1+"#%d P%s "%(legS,pos)
 
     mov1=mov1+ "T%d\r"%(SPEED)
-    print "Bajar lado 1", mov1
+    print "Bajar lado 1"
+    if (debug > 1):
+        print mov1
     ser.write(mov1)
     time.sleep(WAIT)
 
@@ -181,7 +194,9 @@ while True:
         mov1=mov1+"#%d P%s "%(legS,pos)
 
     mov1=mov1+ "T%d\r"%(SPEED)
-    print "Levantar lado 2", mov1
+    print "Levantar lado 2"
+    if (debug > 1):
+        print mov1
     ser.write(mov1)
     time.sleep(WAIT)
 
@@ -216,7 +231,9 @@ while True:
 
     mov1=mov1+ "T%d\r"%(SPEED)
 
-    print "2", mov1
+    print "Avance lado 1"
+    if (debug > 1):
+        print mov1
     ser.write(mov1)
     time.sleep(WAIT)
 
