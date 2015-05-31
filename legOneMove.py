@@ -1,5 +1,6 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
+# vim: tabstop=4 expandtab shiftwidth=4 softtabstop=4
 
 # This code can be reused in any project and in any way you want. 
 # It would be nice if you let me know or you cite this project.
